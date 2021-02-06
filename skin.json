@@ -1,0 +1,56 @@
+{
+  "name": "Pandora",
+  "version": "1.0.0",
+  "namemsg": "skinname-pandora",
+  "descriptionmsg": "pandora-skin-desc",
+  "url": "https://www.mediawiki.org/wiki/Skin:Pandora",
+  "author": [
+    "[https://skins.wmflabs.org skins.wmflabs.org v.1.0]"
+  ],
+  "type": "skin",
+  "requires": {
+    "MediaWiki": ">= 1.35.0"
+  },
+  "license-name": "GPL-2.0-or-later",
+  "manifest_version": 2,
+  "ValidSkinNames": {
+    "pandora": {
+      "class": "SkinPandora",
+      "args": [
+        {
+          "name": "pandora",
+          "templateDirectory": "skins/Pandora/templates",
+          "messages": [
+            "sitetitle"
+          ],
+          "styles": [
+            "skins.pandora.styles"
+          ]
+        }
+      ]
+    }
+  },
+  "MessagesDirs": {
+    "Pandora": [
+      "i18n"
+    ]
+  },
+  "AutoloadClasses": {
+    "SkinPandora": "SkinPandora.php"
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "Pandora"
+  },
+  "ResourceModules": {
+    "skins.pandora.styles": {
+      "class": "ResourceLoaderSkinModule",
+      "features": [
+        "elements",
+        "content",
+        "interface",
+        "legacy"
+      ]
+    }
+  }
+}
