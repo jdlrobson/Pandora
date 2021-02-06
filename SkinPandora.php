@@ -59,7 +59,7 @@ class WikiPageTemplateRenderer {
 		);
 
 		$renderer = eval( $compiled );
-		return $renderer( $data, $scopes );
+		return $renderer( $data, [] );
 	}
 }
 
