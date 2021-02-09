@@ -1,56 +1,93 @@
 {
-  "name": "Pandora",
-  "version": "1.0.0",
-  "namemsg": "skinname-pandora",
-  "descriptionmsg": "pandora-skin-desc",
-  "url": "https://www.mediawiki.org/wiki/Skin:Pandora",
-  "author": [
-    "[https://skins.wmflabs.org skins.wmflabs.org v.1.0]"
-  ],
-  "type": "skin",
-  "requires": {
-    "MediaWiki": ">= 1.35.0"
-  },
-  "license-name": "GPL-2.0-or-later",
-  "manifest_version": 2,
-  "ValidSkinNames": {
-    "pandora": {
-      "class": "SkinPandora",
-      "args": [
-        {
-          "name": "pandora",
-          "templateDirectory": "skins/Pandora/templates",
-          "messages": [
-            "sitetitle"
-          ],
-          "styles": [
-            "skins.pandora.styles"
-          ]
-        }
-      ]
-    }
-  },
-  "MessagesDirs": {
-    "Pandora": [
-      "i18n"
-    ]
-  },
-  "AutoloadClasses": {
-    "SkinPandora": "SkinPandora.php"
-  },
-  "ResourceFileModulePaths": {
-    "localBasePath": "",
-    "remoteSkinPath": "Pandora"
-  },
-  "ResourceModules": {
-    "skins.pandora.styles": {
-      "class": "ResourceLoaderSkinModule",
-      "features": [
-        "elements",
-        "content",
-        "interface",
-        "legacy"
-      ]
-    }
-  }
+	"name": "Pandora",
+	"version": "1.0.0",
+	"namemsg": "skinname-pandora",
+	"descriptionmsg": "pandora-skin-desc",
+	"url": "https://www.mediawiki.org/wiki/Skin:Pandora",
+	"author": [
+		"[https://skins.wmflabs.org skins.wmflabs.org v.1.0]",
+		"Jon Robson",
+		"Ryan Schmidt"
+	],
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"license-name": "GPL-2.0-or-later",
+	"manifest_version": 2,
+	"ValidSkinNames": {
+		"pandora": {
+			"class": "SkinPandora",
+			"args": [
+				{
+					"name": "pandora",
+					"templateDirectory": "skins/Pandora/templates",
+					"messages": [
+						"sitetitle"
+					],
+					"styles": [
+						"skins.pandora.styles"
+					]
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"Pandora": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SkinPandora": "SkinPandora.php"
+	},
+	"AutoloadNamespaces": {
+		"Pandora\\": "includes/"
+	},
+	"ContentHandlers": {
+		"less": "Pandora\\LessContentHandler",
+		"mustache": "Pandora\\MustacheContentHandler"
+	},
+	"Hooks":{
+		"CodeEditorGetPageLanguage": "Pandora\\Hooks::onCodeEditorGetPageLanguage",
+		"ContentHandlerDefaultModelFor": "pandora",
+		"TitleQuickPermissions": "pandora"
+	},
+	"HookHandlers": {
+		"pandora": {
+			"class": "Pandora\\Hooks",
+			"services": [
+				"PermissionManager"
+			]
+		}
+	},
+	"RawHtmlMessages": [
+		"pandora.mustache"
+	],
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteSkinPath": "Pandora/resources"
+	},
+	"ResourceModules": {
+		"skins.pandora.styles": {
+			"class": "Pandora\\ResourceLoaderHybridModule",
+			"features": [
+				"elements",
+				"content",
+				"interface",
+				"legacy"
+			],
+			"stylePages": [
+				"MediaWiki:Pandora.less"
+			]
+		}
+	},
+	"attributes": {
+		"SyntaxHighlight": {
+			"Models": {
+				"less": "less",
+				"mustache": "html+handlebars"
+			}
+		}
+	},
+	"callback": "Pandora\\Setup::registrationCallback"
 }
