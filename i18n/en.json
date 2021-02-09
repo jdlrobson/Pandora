@@ -1,4 +1,8 @@
 {
-  "skinname-pandora": "Pandora",
-  "Pandora-desc": "A skin created by [https://skins.wmflabs.org skins.wmflabs.org v.1.0]"
+	"skinname-pandora": "Pandora",
+	"pandora-desc": "A skin created by [https://skins.wmflabs.org skins.wmflabs.org v.1.0]",
+	"pandora-error": "Error",
+	"pandora-invalid-partial": "Could not compile template `$1`: The partial name `$2` is invalid.",
+	"pandora-missing-partial": "Could not compile template `$1`: Could not find partial `$2` at $3.",
+	"pandora-need-js": "Please enable JavaScript to install this skin and refresh this page."
 }

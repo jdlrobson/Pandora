@@ -1,6 +1,6 @@
 <div style="max-width: 800px; margin: auto; padding: 8px;">
     <h1>Install Pandora skin</h1>
-    <p>The Pandora skin is installed but needs to be setup. The Pandora skin is a skin completely defined inside your wiki. To use it you'll first need to bring it to life
+    <p>The Pandora skin is installed but needs to be setup. Pandora is a skin completely defined inside your wiki. To use it you'll first need to bring it to life
     using another skin. We'll walk you through the install steps. Make sure you are logged in as an admin to do this.</p>
 
 
@@ -8,29 +8,17 @@
     <h2>Step 0: Enable JavaScript</h2>
     {{{pandora-noscript}}}
     </noscript>
-    <h2>Step 1: Enable site config <span id="step-1">{{#pandora-config-done}}✅{{/pandora-config-done}}
-    {{^pandora-config-done}}⬜{{/pandora-config-done}}</span></h2>
-    <p>Add the following code to your LocalSettings.php and refresh this page.</p>
-    <pre>
-    $wgUseSiteCss = true;
-    $wgAllowSiteCSSOnRestrictedPages = true;
-    </pre>
-
-    <h2>Step 2: Login as admin <span id="step-2">⬜</span></h2>
+    <h2>Step 1: Login as admin <span id="step-2">⬜</span></h2>
     <a target="_blank"  data-title-edit="Special:Userlogin">Login </a>
-    <h2>Step 4: Install CSS <span id="step-3">⬜</span></h2>
-    <p>Copy the following CSS to <a target="_blank" data-title-edit="MediaWiki:Pandora.css">[[MediaWiki:Pandora.css]]</a>
-    <textarea style="height: 200px;">
-    {{{pandora-css-raw}}}
-    </textarea>
+    <h2>Step 2: Install LESS <span id="step-3">⬜</span></h2>
+    <p>Copy the following LESS to <a target="_blank" data-title-edit="MediaWiki:Pandora.less">[[MediaWiki:Pandora.less]]</a>
+    <textarea style="height: 200px;">{{{pandora-less-raw}}}</textarea>
 
-    <h2>Step 4: Install Template <span id="step-4">⬜</span></h2>
+    <h2>Step 3: Install Template <span id="step-4">⬜</span></h2>
     <p>Copy the following template to <a target="_blank" data-title-edit="MediaWiki:Pandora.mustache">[[MediaWiki:Pandora.mustache]]</a>
-    <textarea style="height: 200px;">
-    {{{pandora-template-raw}}}
-    </textarea>
+    <textarea style="height: 200px;">{{{pandora-template-raw}}}</textarea>
 
-    <h2>Step 5: Refresh the page <span id="step-5">⬜</span></h2>
+    <h2>Step 4: Refresh the page <span id="step-5">⬜</span></h2>
     <p>Once the above is done, refresh the page, and you will have opened Pandora's box to a skin that lives on wiki.</p>
 </div>
 

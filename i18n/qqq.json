@@ -1,4 +1,8 @@
 {
-  "skinname-pandora": "{{optional}}",
-  "pandora-desc": "{{desc|what=skin|name=Pandora|url=https://www.mediawiki.org/wiki/Skin:Pandora}}"
+	"skinname-pandora": "{{optional}}",
+	"pandora-desc": "{{desc|what=skin|name=Pandora|url=https://www.mediawiki.org/wiki/Skin:Pandora}}",
+	"pandora-error": "Title of error pages displayed when the skin template is invalid.",
+	"pandora-invalid-partial": "Error message displayed when the skin template contains an invalid partial. $1 is the name of the skin template, $2 is the name of the invalid partial.",
+	"pandora-missing-partial": "Error message displayed when the skin template contains a non-existent partial. $1 is the name of the skin template, $2 is the name of the partial, $3 is the filename being compiled.",
+	"pandora-need-js": "Error message displayed to the user when the skin is not set up and they have javascript disabled."
 }
