@@ -21,9 +21,12 @@
           "name": "pandora",
           "templateDirectory": "skins/Pandora/templates",
           "messages": [
-            "sitetitle"
+            "sitetitle",
+            "tagline",
+            "otherlanguages"
           ],
           "styles": [
+            "mediawiki.ui.button",
             "skins.pandora.styles"
           ]
         }
