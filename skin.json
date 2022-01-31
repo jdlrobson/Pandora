@@ -9,7 +9,7 @@
   ],
   "type": "skin",
   "requires": {
-    "MediaWiki": ">= 1.35.0"
+    "MediaWiki": ">= 1.38.0"
   },
   "license-name": "GPL-2.0-or-later",
   "manifest_version": 2,
@@ -28,7 +28,6 @@
       "args": [
         {
           "name": "pandora",
-          "templateDirectory": "skins/Pandora/templates",
           "messages": [
             "sitetitle",
             "tagline",
